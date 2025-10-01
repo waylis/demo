@@ -1,0 +1,24 @@
+{
+  "name": "waylis-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=dev npx tsx --watch src/index.ts",
+    "build": "tsc",
+    "start": "NODE_ENV=prod node build/index.js"
+  },
+  "author": "cheatsnake",
+  "license": "MIT",
+  "dependencies": {
+    "@waylis/core": "^0.1.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "@types/qrcode": "^1.5.5",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.2"
+  }
+}
