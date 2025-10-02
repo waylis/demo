@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@waylis/core": "^0.1.0",
+    "@waylis/sqlite-db": "^0.1.0",
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
