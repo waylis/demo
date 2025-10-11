@@ -12,14 +12,14 @@
   "author": "cheatsnake",
   "license": "MIT",
   "dependencies": {
-    "@waylis/core": "^0.1.0",
+    "@waylis/core": "^0.1.1",
     "@waylis/sqlite-db": "^0.1.0",
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.7.2",
     "@types/qrcode": "^1.5.5",
     "tsx": "^4.20.6",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
