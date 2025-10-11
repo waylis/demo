@@ -9,7 +9,12 @@ const command = createCommand({
 const datetime = createStep({
     key: "birthday",
     prompt: { type: "text", content: "Enter your date of birth:" },
-    reply: { bodyType: "datetime", bodyLimits: { max: new Date() } },
+    reply: { bodyType: "datetime" },
+    handler: async (birthday) => {
+        if (birthday.getTime() > new Date().getTime()) {
+            return { type: "text", content: "Dates from the future are not allowed." };
+        }
+    },
 });
 
 function getBirthdayStats(birthdate: Date) {
