@@ -1,15 +1,9 @@
+import { IncomingMessage, ServerResponse } from "node:http";
+import { randomUUID } from "node:crypto";
 import { AppServer, SimpleLogger } from "@waylis/core";
 import { SqliteDatabase } from "@waylis/sqlite-db";
-import { randomUUID } from "node:crypto";
-import { IncomingMessage, ServerResponse } from "node:http";
 
-export const app = new AppServer({
-    db: new SqliteDatabase("data/sqlite.db"),
-    logger: new SimpleLogger({ levels: ["info", "warn", "error"] }),
-    config: {
-        app: {
-            name: "@waylis/demo",
-            description: `👋 Welcome to **Waylis** demo server
+const description = `👋 Welcome to **Waylis** demo server
 
 Here you can try out different scenes created with Waylis from the end user's perspective. 
 
@@ -18,9 +12,13 @@ Here you can try out different scenes created with Waylis from the end user's pe
 - [This demo source code](https://github.com/waylis/demo)
 - [Bug report](https://github.com/waylis/core/issues)
 - [Donate](https://buymeacoffee.com/yurace)
-            `,
-        },
+`;
 
+export const app = new AppServer({
+    db: new SqliteDatabase("data/sqlite.db"),
+    logger: new SimpleLogger({ levels: ["info", "warn", "error"] }),
+    config: {
+        app: { name: "@waylis/demo", description },
         auth: {
             // Rewrite the default authentication handler to prevent custom user IDs, only random ones
             handler: async (_req: IncomingMessage, res: ServerResponse) => {

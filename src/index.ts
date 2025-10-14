@@ -1,11 +1,11 @@
 import { app } from "./app.js";
-import { birthdayStats } from "./birthday-stats.js";
-import { bitcoinPrices } from "./bitcoin-prices.js";
-import { qrcodeGenerator } from "./qrcode-generator.js";
 import { questionnaire } from "./questionnaire.js";
-import { randomCat } from "./random-cat.js";
-import { txtParser } from "./txt-parser.js";
+import { birthdayStats } from "./birthday-stats.js";
 import { urlShortener } from "./url-shortener.js";
+import { txtParser } from "./txt-parser.js";
+import { qrcodeGenerator } from "./qrcode-generator.js";
+import { randomCat } from "./random-cat.js";
+import { bitcoinPrices } from "./bitcoin-prices.js";
 
 const main = async () => {
     app.addScene(questionnaire.command, questionnaire.scene);
