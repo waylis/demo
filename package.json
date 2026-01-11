@@ -5,21 +5,21 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=dev npx tsx --watch src/index.ts",
+    "dev": "NODE_ENV=dev npx tsx --env-file=.env --watch src/index.ts",
     "build": "tsc",
-    "start": "NODE_ENV=prod node build/index.js"
+    "start": "NODE_ENV=prod node --env-file=.env build/index.js"
   },
   "author": "cheatsnake",
   "license": "MIT",
   "dependencies": {
-    "@waylis/core": "^0.1.2",
+    "@waylis/core": "^0.2.0",
     "@waylis/sqlite-db": "^0.1.0",
     "qrcode": "^1.5.4"
   },
   "devDependencies": {
     "@types/node": "^24.7.2",
-    "@types/qrcode": "^1.5.5",
-    "tsx": "^4.20.6",
+    "@types/qrcode": "^1.5.6",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
 }
