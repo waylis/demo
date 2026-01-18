@@ -12,7 +12,7 @@
   "author": "cheatsnake",
   "license": "MIT",
   "dependencies": {
-    "@waylis/core": "^0.2.0",
+    "@waylis/core": "^0.3.0",
     "@waylis/sqlite-db": "^0.1.0",
     "qrcode": "^1.5.4"
   },
